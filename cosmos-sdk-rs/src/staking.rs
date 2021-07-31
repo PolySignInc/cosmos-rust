@@ -242,5 +242,4 @@ impl From<&MsgBeginRedelegate> for proto::cosmos::staking::v1beta1::MsgBeginRede
             amount: proto_amount,
         }
     }
-<<<<<<< HEAD
 }
