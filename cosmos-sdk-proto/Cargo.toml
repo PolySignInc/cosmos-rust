@@ -8,7 +8,7 @@ authors = [
 ]
 edition = "2018"
 license = "Apache-2.0"
-repository = "https://github.com/cosmos/cosmos-rust/tree/master/cosmos-sdk-proto"
+repository = "https://github.com/cosmos/cosmos-rust/tree/main/cosmos-sdk-proto"
 description = "Protobuf stuct defintions for interacting Cosmos SDK powered blockchains"
 readme     = "README.md"
 categories = ["cryptography", "cryptography::cryptocurrencies", "database"]
@@ -22,11 +22,12 @@ prost-types = "0.7"
 tonic = { version = "0.4", optional = true }
 
 [dependencies.tendermint-proto]
-version = "0.19"
+version = "0.21"
 
 [features]
 default = ["grpc"]
 grpc = ["tonic"]
+cosmwasm = []
 
 [package.metadata.docs.rs]
 all-features = true

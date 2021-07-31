@@ -21,7 +21,7 @@
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![doc(
     html_logo_url = "https://raw.githubusercontent.com/cosmos/cosmos-rust/main/.images/cosmos.png",
-    html_root_url = "https://docs.rs/cosmos-sdk/0.1.1"
+    html_root_url = "https://docs.rs/cosmos-sdk/0.2.0"
 )]
 #![forbid(unsafe_code)]
 #![warn(trivial_casts, trivial_numeric_casts, unused_import_braces)]
@@ -30,6 +30,9 @@ pub mod bank;
 pub mod crypto;
 pub mod staking;
 pub mod tx;
+
+#[cfg(feature = "cosmwasm")]
+pub mod cosmwasm;
 
 #[cfg(feature = "dev")]
 #[cfg_attr(docsrs, doc(cfg(feature = "dev")))]
@@ -49,6 +52,10 @@ pub use crate::{
 
 pub use cosmos_sdk_proto as proto;
 pub use tendermint;
+
+#[cfg(feature = "bip32")]
+#[cfg_attr(docsrs, doc(cfg(feature = "bip32")))]
+pub use bip32;
 
 #[cfg(feature = "rpc")]
 #[cfg_attr(docsrs, doc(cfg(feature = "rpc")))]
