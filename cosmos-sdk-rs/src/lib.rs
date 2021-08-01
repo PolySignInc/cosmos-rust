@@ -27,6 +27,7 @@
 #![warn(trivial_casts, trivial_numeric_casts, unused_import_braces)]
 
 pub mod bank;
+pub mod distribution;
 pub mod crypto;
 pub mod staking;
 pub mod tx;
