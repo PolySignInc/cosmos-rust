@@ -117,3 +117,7 @@ impl From<PublicKey> for tendermint::PublicKey {
         pk.0
     }
 }
+
+pub fn from_tendermint(pk: tendermint::PublicKey) -> PublicKey {
+    PublicKey(pk)
+}
